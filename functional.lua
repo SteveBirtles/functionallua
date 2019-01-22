@@ -111,8 +111,8 @@ local list = generate(20)
 printlist(list)
 
 local twice = function (x) return x * 2 end
-local newlist = map(twice, list)
-printlist(newlist)
+local twicelist = map(twice, list)
+printlist(twicelist)
 
 local even = function(x) return x % 2 == 0 end
 local evenlist = filter(even, list)
@@ -129,11 +129,11 @@ local multiply = function(a, b) return a * b end
 local product = reduce(multiply, list, 1)
 print(product)
 
-local list_and_newlist = conjunction(list, newlist)
-printlist(list_and_newlist)
+local list_and_twicelist = conjunction(list, twicelist)
+printlist(list_and_twicelist)
 
-local list_or_newlist = disjunction(list, newlist)
-printlist(list_or_newlist)
+local list_or_twicelist = disjunction(list, twicelist)
+printlist(list_or_twicelist)
 
-local list_not_newlist = negation(list, newlist)
-printlist(list_not_newlist)
+local list_not_twicelist = negation(list, twicelist)
+printlist(list_not_twicelist)
